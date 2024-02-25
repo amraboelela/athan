@@ -25,7 +25,7 @@ In a terminal in macOS, or Linux do:
 Then, put
 
 ```
-0 1 * * * /usr/bin/python3 /path/to/athan-times.py
+0 1 * * * /path/to/athan
 ```
 
 ## If you need to stop it:

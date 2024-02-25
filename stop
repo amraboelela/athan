@@ -1,1 +1,1 @@
-ps aux | grep athan | awk '{print $2}' | xargs -I{} kill -9 {}
+pkill -f './athan-times.py'
