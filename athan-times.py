@@ -40,16 +40,22 @@ def play_azan1():
 def play_azan3():
     playsound.playsound("azan3.mp3")
   
+def play_azan4():
+    playsound.playsound("azan4.mp3")
+  
+def play_azan10():
+    playsound.playsound("azan10.mp3")
+    
 def play_azan13():
     playsound.playsound("azan13.mp3")
     
 prayer_actions = {
-    "fajr": play_azan3,
+    "fajr": play_azan4,
     "shuruq": play_alert1,
     "zuhr": play_alert1,
     "asr": play_alert1,
-    "maghrib": play_azan13,
-    "isha": play_azan1,
+    "maghrib": play_azan10,
+    "isha": play_azan13,
 }
 
 scheduler = BlockingScheduler()
