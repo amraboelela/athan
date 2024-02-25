@@ -31,13 +31,7 @@ Then, put
 ## If you need to stop it:
 
 ```
-% ps aux | grep athan
-```
-
-Then kill the process, e.g.:
-
-```
-% kill 48037
+athan % ./stop 
 ```
 
 ## If you need to not play the azan for a certain prayer:
