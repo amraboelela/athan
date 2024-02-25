@@ -1,7 +1,6 @@
-from datetime import date
+from datetime import date, datetime
 from adhan import adhan
 from adhan.methods import ISNA, ASR_STANDARD
-from datetime import datetime
 import schedule
 import playsound  # Install using pip install playsound
 from apscheduler.schedulers.blocking import BlockingScheduler
@@ -32,6 +31,12 @@ print("Asr:", adhan_times["asr"])
 print("Maghrib:", adhan_times["maghrib"])
 print("Isha:", adhan_times["isha"])
 
+def play_alert1():
+    playsound.playsound("alert1.wav")
+    
+def play_azan1():
+    playsound.playsound("azan1.mp3")
+    
 def play_azan3():
     playsound.playsound("azan3.mp3")
   
@@ -40,11 +45,14 @@ def play_azan13():
     
 prayer_actions = {
     "fajr": play_azan3,
-    "zuhr": play_azan3,
-    "ash": play_azan3,
+    "shuruq": play_alert1,
+    "zuhr": play_alert1,
+    "asr": play_alert1,
     "maghrib": play_azan13,
-    "isha": play_azan13,
+    "isha": play_azan1,
 }
+
+scheduler = BlockingScheduler()
 
 for prayer, prayer_time in adhan_times.items():
     # Extract the individual components
@@ -65,16 +73,33 @@ for prayer, prayer_time in adhan_times.items():
     print("Second:", second)
     print("")
 
-    # Set the target date and time
-    #target_time = datetime(2024, 2, 24, 5, 31, 0)  # Year, month, day, hour, minute, second
-
     target_time = datetime(year, month, day, hour, minute, second)
     #target_time = datetime(2024, 2, 24, 20, 34, 0)
     
     # Create scheduler
-    scheduler = BlockingScheduler()
+    #scheduler = BlockingScheduler()
 
     scheduler.add_job(prayer_actions[prayer], 'date', run_date=target_time)
-    
-    # Start scheduler
-    scheduler.start()
+
+#print("Fajr:", adhan_times["fajr"])
+#
+#target_time = datetime(2024, 2, 24, 21, 34, 0)
+#
+## Create scheduler
+#
+#scheduler.add_job(play_alert1, 'date', run_date=target_time)
+#
+## Start scheduler
+##scheduler.start()
+#
+#print("Dhuhr:", adhan_times["zuhr"])
+#
+#target_time = datetime(2024, 2, 24, 21, 15, 0)
+#    
+## Create scheduler
+##scheduler = BlockingScheduler()
+#
+#scheduler.add_job(play_azan13, 'date', run_date=target_time)
+
+# Start scheduler
+scheduler.start()

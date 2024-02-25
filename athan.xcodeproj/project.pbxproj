@@ -12,6 +12,8 @@
 		F54FB65C2B8AF30A00CED7E0 /* azan3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = azan3.mp3; sourceTree = "<group>"; };
 		F54FB65D2B8AF30A00CED7E0 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F54FB65E2B8AF30A00CED7E0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F54FB65F2B8B035F00CED7E0 /* azan1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = azan1.mp3; sourceTree = "<group>"; };
+		F54FB6602B8B084900CED7E0 /* alert1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alert1.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -19,6 +21,8 @@
 			isa = PBXGroup;
 			children = (
 				F54FB65A2B8AF30A00CED7E0 /* athan-times.py */,
+				F54FB6602B8B084900CED7E0 /* alert1.wav */,
+				F54FB65F2B8B035F00CED7E0 /* azan1.mp3 */,
 				F54FB65C2B8AF30A00CED7E0 /* azan3.mp3 */,
 				F54FB65B2B8AF30A00CED7E0 /* azan13.mp3 */,
 				F54FB65D2B8AF30A00CED7E0 /* LICENSE */,

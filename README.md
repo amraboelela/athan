@@ -2,6 +2,19 @@
 Open source athan time with call to prayer in python
 
 # How to run it
+```
+athan % vi athann-times.py
+```
+
+You need to put the correct Latitude and Longitude of your city, and the correct timezone.
+```
+adhan_times = adhan(
+    day=date.today(),
+    location=(37.3477, -120.6093),  # Atwater, CA 95301
+    parameters=params,
+    timezone_offset=-8,
+)
+```
 
 In a terminal in macOS, or Linux do:
 
@@ -33,13 +46,14 @@ Then kill the process, e.g.:
 athan % vi athan-times.py
 ```
 
-Then comment out the prayer that you don't want it to call out using `#`. e.g for zuhr azan:
+You can choose between an azan vs an alert by putting play_azan1 or play_alert1, as following:
 
 ```
 prayer_actions = {
     "fajr": play_azan3,
-#    "zuhr": play_azan3,
-    "ash": play_azan3,
+    "shuruq": play_alert1,
+    "zuhr": play_alert1,
+    "asr": play_alert1,
     "maghrib": play_azan13,
     "isha": play_azan13,
 }
