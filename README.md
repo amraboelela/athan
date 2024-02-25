@@ -25,7 +25,13 @@ In a terminal in macOS, or Linux do:
 Then, put
 
 ```
-0 1 * * * /path/to/athan
+0 1 * * * /path/to/athan_schedule
+```
+
+## To list the athan time for today
+
+```
+athan % ./athan_times 
 ```
 
 ## If you need to stop it:
@@ -37,7 +43,7 @@ athan % ./stop
 ## If you need to not play the azan for a certain prayer:
 
 ```
-athan % vi athan-times.py
+athan % vi athan_schedule.py
 ```
 
 You can choose between an azan vs an alert by putting play_azan1 or play_alert1, as following:

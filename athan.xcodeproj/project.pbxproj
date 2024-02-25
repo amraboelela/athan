@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		F54FB65A2B8AF30A00CED7E0 /* athan-times.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = "athan-times.py"; sourceTree = "<group>"; };
+		F54FB65A2B8AF30A00CED7E0 /* athan_times.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = athan_times.py; sourceTree = "<group>"; };
 		F54FB65B2B8AF30A00CED7E0 /* azan13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = azan13.mp3; sourceTree = "<group>"; };
 		F54FB65C2B8AF30A00CED7E0 /* azan3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = azan3.mp3; sourceTree = "<group>"; };
 		F54FB65D2B8AF30A00CED7E0 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -17,15 +17,19 @@
 		F54FB6612B8BDF6C00CED7E0 /* azan10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = azan10.mp3; sourceTree = "<group>"; };
 		F54FB6622B8BDF6C00CED7E0 /* azan4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = azan4.mp3; sourceTree = "<group>"; };
 		F54FB6632B8BE39600CED7E0 /* stop */ = {isa = PBXFileReference; lastKnownFileType = text; path = stop; sourceTree = "<group>"; };
-		F54FB6642B8BE46F00CED7E0 /* athan */ = {isa = PBXFileReference; lastKnownFileType = text; path = athan; sourceTree = "<group>"; };
+		F54FB6642B8BE46F00CED7E0 /* athan_schedule */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = athan_schedule; sourceTree = "<group>"; };
+		F54FB6652B8C041A00CED7E0 /* athan_schedule.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = athan_schedule.py; sourceTree = "<group>"; };
+		F5F1BDB22B8C065A0085B755 /* athan_times */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = athan_times; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		F54FB6532B8AF2D100CED7E0 = {
 			isa = PBXGroup;
 			children = (
-				F54FB65A2B8AF30A00CED7E0 /* athan-times.py */,
-				F54FB6642B8BE46F00CED7E0 /* athan */,
+				F54FB65A2B8AF30A00CED7E0 /* athan_times.py */,
+				F54FB6652B8C041A00CED7E0 /* athan_schedule.py */,
+				F54FB6642B8BE46F00CED7E0 /* athan_schedule */,
+				F5F1BDB22B8C065A0085B755 /* athan_times */,
 				F54FB6632B8BE39600CED7E0 /* stop */,
 				F54FB6622B8BDF6C00CED7E0 /* azan4.mp3 */,
 				F54FB6612B8BDF6C00CED7E0 /* azan10.mp3 */,

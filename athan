@@ -1,8 +1,0 @@
-#!/bin/bash
-
-ROOT_DIR=$(dirname $0)
-
-cd ${ROOT_DIR}
-
-./stop
-/usr/local/bin/python3 ${ROOT_DIR}/athan-times.py 2>&1 | tee log.txt &

@@ -1,1 +1,1 @@
-pkill -f './athan-times.py'
+pkill -f './athan_schedule.py'
