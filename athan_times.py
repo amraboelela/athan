@@ -4,7 +4,7 @@ from hijri_date import *
 from location import *
 
 #print("")
-print("Date: ", today_hijri_date())
+print("Date:\t\t", today_hijri_date())
 print("")
  
 params = {}

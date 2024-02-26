@@ -20,11 +20,11 @@ def get_current_utc_offset():
 # Get the current UTC offset
 current_utc_offset = get_current_utc_offset()
 
-print("Time zone:", current_utc_offset)
+print("Time zone:\t", current_utc_offset)
 
 def get_current_location():
     location = geocoder.ip('me')
     return location.latlng  # Returns latitude and longitude
 
 current_location = get_current_location()
-print("Location:", current_location)
+print("Location:\t", current_location)
