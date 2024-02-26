@@ -3,8 +3,8 @@ from adhan.methods import ISNA, ASR_STANDARD
 from hijri_date import *
 from location import *
 
-print("")
-print(today_hijri_date())
+#print("")
+print("Date: ", today_hijri_date())
 print("")
  
 params = {}
