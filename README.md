@@ -3,13 +3,13 @@ Open source athan time with call to prayers in python, it automatically detect y
 
 ## Install
 
-In a terminal in macOS, or Linux do:
+In order to automatically schedule athan times call for prayers, in a terminal in macOS, or Linux do:
 
 ```
 % crontab -e
 ```
 
-Then, put
+Then, enter:
 
 ```
 0 0 * * * /path/to/athan_schedule
@@ -41,6 +41,12 @@ Isha:           07:03 PM
 
 ```
 athan % ./stop 
+```
+
+## To restart athan schedule for today
+
+```
+athan % ./athan_schedule 
 ```
 
 ## Customize athan / alerts
