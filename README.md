@@ -12,9 +12,10 @@ In order to automatically schedule athan times call for prayers, in a terminal i
 Then, enter:
 
 ```
-0 0 * * * /path/to/athan_schedule
-0 12 * * * /path/to/athan_schedule
+0 */4 * * * /path/to/athan_schedule
 ```
+
+`/path/to/athan_schedule` depends on where you cloned this repo, e.g. `/Users/amraboelela/python/athan/athan_schedule`
 
 ## List current athan times
 
