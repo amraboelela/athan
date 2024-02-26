@@ -1,7 +1,7 @@
 # Athan
 Open source athan time with call to prayers in python, it automatically detect your location.
 
-# How to install it
+## Install
 
 In a terminal in macOS, or Linux do:
 
@@ -16,19 +16,34 @@ Then, put
 0 12 * * * /path/to/athan_schedule
 ```
 
-## To list the athan time for today
+## List current athan times
 
 ```
 athan % ./athan_times 
 ```
 
-## If you need to stop it:
+Output sample:
+
+```
+Current UTC Offset: -8.0
+Current Location (latitude, longitude): [37.123, -120.2602]
+
+Prayer Times:
+Fajr:           05:28 AM
+Sunrise:        06:40 AM
+Dhuhr:          12:15 PM
+Asr:            03:24 PM
+Maghrib:        05:51 PM
+Isha:           07:03 PM
+```
+
+## To stop athan schedule for today
 
 ```
 athan % ./stop 
 ```
 
-## If you want to customize athan / alerts for each prayer:
+## Customize athan / alerts
 
 ```
 athan % vi athan_schedule.py

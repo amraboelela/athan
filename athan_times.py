@@ -20,11 +20,12 @@ adhan_times will be a dict containing datetime objects for the keys 'fajr',
 """
 
 # Print all prayer times
-print("All Prayer Times:")
-print("Fajr:", adhan_times["fajr"])
-print("Sunrise:", adhan_times["shuruq"])
-print("Dhuhr:", adhan_times["zuhr"])
-print("Asr:", adhan_times["asr"])
-print("Maghrib:", adhan_times["maghrib"])
-print("Isha:", adhan_times["isha"])
+print("")
+print("Prayer Times:")
+print("Fajr:\t\t", adhan_times["fajr"].strftime("%I:%M %p"))
+print("Sunrise:\t", adhan_times["shuruq"].strftime("%I:%M %p"))
+print("Dhuhr:\t\t", adhan_times["zuhr"].strftime("%I:%M %p"))
+print("Asr:\t\t", adhan_times["asr"].strftime("%I:%M %p"))
+print("Maghrib:\t", adhan_times["maghrib"].strftime("%I:%M %p"))
+print("Isha:\t\t", adhan_times["isha"].strftime("%I:%M %p"))
 

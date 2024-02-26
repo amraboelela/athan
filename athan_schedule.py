@@ -52,7 +52,6 @@ for prayer, prayer_time in adhan_times.items():
     print("")
 
     target_time = datetime(year, month, day, hour, minute, second)
-
     scheduler.add_job(prayer_actions[prayer], 'date', run_date=target_time)
 
 #print("Fajr:", adhan_times["fajr"])
@@ -63,17 +62,6 @@ for prayer, prayer_time in adhan_times.items():
 #
 #scheduler.add_job(play_alert1, 'date', run_date=target_time)
 #
-## Start scheduler
-##scheduler.start()
-#
-#print("Dhuhr:", adhan_times["zuhr"])
-#
-#target_time = datetime(2024, 2, 24, 21, 15, 0)
-#    
-## Create scheduler
-##scheduler = BlockingScheduler()
-#
-#scheduler.add_job(play_azan13, 'date', run_date=target_time)
 
 # Start scheduler
 scheduler.start()
