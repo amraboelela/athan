@@ -13,7 +13,7 @@ params.update(ASR_STANDARD)
 
 adhan_times = adhan(
     day=date.today(),
-    location=get_current_location(),  # Atwater, CA 95301
+    location=get_current_location(),
     parameters=params,
     timezone_offset=get_current_utc_offset(),
 )
@@ -27,3 +27,12 @@ print("Asr:\t\t", adhan_times["asr"].strftime("%I:%M %p"))
 print("Maghrib:\t", adhan_times["maghrib"].strftime("%I:%M %p"))
 print("Isha:\t\t", adhan_times["isha"].strftime("%I:%M %p"))
 
+# Initialize alert times
+alert_times = {}
+
+# Calculate alert times (15 minutes earlier for each adhan)
+for key, value in adhan_times.items():
+    alert_times[key] = value - timedelta(minutes=15)
+
+#print("")
+#print("Alert Times (15 minutes earlier):", alert_times)

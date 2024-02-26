@@ -5,6 +5,9 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 
 def play_alert1():
     playsound.playsound("alert1.wav")
+  
+def play_alert2():
+    playsound.playsound("alert2.wav")
     
 def play_azan1():
     playsound.playsound("azan1.mp3")
@@ -21,17 +24,48 @@ def play_azan10():
 def play_azan13():
     playsound.playsound("azan13.mp3")
     
-prayer_actions = {
-    "fajr": play_azan4,
+alert_actions = {
+    "fajr": play_alert1,
     "shuruq": play_alert1,
     "zuhr": play_alert1,
     "asr": play_alert1,
+    "maghrib": play_alert1,
+    "isha": play_alert1,
+}
+
+prayer_actions = {
+    "fajr": play_azan4,
+    "shuruq": play_alert2,
+    "zuhr": play_alert2,
+    "asr": play_alert2,
     "maghrib": play_azan10,
     "isha": play_azan13,
 }
 
 scheduler = BlockingScheduler()
 
+for prayer, alert_time in alert_times.items():
+    # Extract the individual components
+    year = alert_time.year
+    month = alert_time.month
+    day = alert_time.day
+    hour = alert_time.hour
+    minute = alert_time.minute
+    second = alert_time.second
+
+    # Print the individual components
+    print(prayer, "Time:")
+    print("Year:", year)
+    print("Month:", month)
+    print("Day:", day)
+    print("Hour:", hour)
+    print("Minute:", minute)
+    print("Second:", second)
+    print("")
+
+    target_time = datetime(year, month, day, hour, minute, second)
+    scheduler.add_job(alert_actions[prayer], 'date', run_date=target_time)
+    
 for prayer, prayer_time in adhan_times.items():
     # Extract the individual components
     year = prayer_time.year

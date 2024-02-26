@@ -1,4 +1,4 @@
-from datetime import date, datetime
+from datetime import *
 import pytz
 import geocoder
 
