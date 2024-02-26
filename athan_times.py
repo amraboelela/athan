@@ -1,6 +1,6 @@
-from datetime import date, datetime
 from adhan import adhan
 from adhan.methods import ISNA, ASR_STANDARD
+from location import *
 
 params = {}
 params.update(ISNA)
@@ -8,9 +8,9 @@ params.update(ASR_STANDARD)
 
 adhan_times = adhan(
     day=date.today(),
-    location=(37.3477, -120.6093),  # Atwater, CA 95301
+    location=get_current_location(),  # Atwater, CA 95301
     parameters=params,
-    timezone_offset=-8,
+    timezone_offset=get_current_utc_offset(),
 )
 
 """

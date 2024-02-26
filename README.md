@@ -1,20 +1,7 @@
 # Athan
-Open source athan time with call to prayer in python
+Open source athan time with call to prayers in python, it automatically detect your location.
 
-# How to run it
-```
-athan % vi athann-times.py
-```
-
-You need to put the correct Latitude and Longitude of your city, and the correct timezone.
-```
-adhan_times = adhan(
-    day=date.today(),
-    location=(37.3477, -120.6093),  # Atwater, CA 95301
-    parameters=params,
-    timezone_offset=-8,
-)
-```
+# How to install it
 
 In a terminal in macOS, or Linux do:
 
@@ -25,7 +12,8 @@ In a terminal in macOS, or Linux do:
 Then, put
 
 ```
-0 1 * * * /path/to/athan_schedule
+0 0 * * * /path/to/athan_schedule
+0 12 * * * /path/to/athan_schedule
 ```
 
 ## To list the athan time for today
@@ -40,13 +28,13 @@ athan % ./athan_times
 athan % ./stop 
 ```
 
-## If you need to not play the azan for a certain prayer:
+## If you want to customize athan / alerts for each prayer:
 
 ```
 athan % vi athan_schedule.py
 ```
 
-You can choose between an azan vs an alert by putting play_azan1 or play_alert1, as following:
+You can choose between an azan or an alert by putting e.g. play_azan1 or play_alert1, as following:
 
 ```
 prayer_actions = {

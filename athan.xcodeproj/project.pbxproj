@@ -20,6 +20,7 @@
 		F54FB6642B8BE46F00CED7E0 /* athan_schedule */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = athan_schedule; sourceTree = "<group>"; };
 		F54FB6652B8C041A00CED7E0 /* athan_schedule.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = athan_schedule.py; sourceTree = "<group>"; };
 		F5F1BDB22B8C065A0085B755 /* athan_times */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = athan_times; sourceTree = "<group>"; };
+		F5F1BDB32B8C0D730085B755 /* location.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = location.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -30,6 +31,7 @@
 				F54FB6652B8C041A00CED7E0 /* athan_schedule.py */,
 				F54FB6642B8BE46F00CED7E0 /* athan_schedule */,
 				F5F1BDB22B8C065A0085B755 /* athan_times */,
+				F5F1BDB32B8C0D730085B755 /* location.py */,
 				F54FB6632B8BE39600CED7E0 /* stop */,
 				F54FB6622B8BDF6C00CED7E0 /* azan4.mp3 */,
 				F54FB6612B8BDF6C00CED7E0 /* azan10.mp3 */,
