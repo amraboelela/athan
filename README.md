@@ -3,7 +3,31 @@ Open source athan time with call to prayers in python, it automatically detect y
 
 ## Install
 
-In order to automatically schedule athan times call for prayers, in a terminal in macOS, or Linux do:
+- You need to put the correct Latitude and Longitude of your city, and the correct timezone.
+
+```
+adhan_times = adhan(
+    day=date.today(),
+    location=(38.599192, -121.504702),  # Sacramento, CA
+    parameters=params,
+    timezone_offset=-8,
+)
+```
+
+- Or set it to automatic location detection as:
+
+```
+adhan_times = adhan(
+    day=date.today(),
+    location=get_current_location(),
+    parameters=params,
+    timezone_offset=-8,
+)
+```
+
+Note, the automatic detection is good when you are traveling, but it can be about 5 minutes inaccurate.
+
+- In order to automatically schedule athan times call for prayers, in a terminal in macOS, or Linux do:
 
 ```
 % crontab -e
@@ -15,7 +39,7 @@ Then, enter:
 0 */4 * * * /path/to/athan_schedule
 ```
 
-`/path/to/athan_schedule` depends on where you cloned this repo, e.g. `/Users/amraboelela/python/athan/athan_schedule`
+`/path/to/athan_schedule` depends on where you cloned this repo, e.g. `/Users/username/python/athan/athan_schedule`
 
 ## List current athan times
 

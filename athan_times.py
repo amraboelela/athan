@@ -13,7 +13,7 @@ params.update(ASR_STANDARD)
 
 adhan_times = adhan(
     day=date.today(),
-    location=get_current_location(),
+    location=(37.345590, -120.578162), #get_current_location(),
     parameters=params,
     timezone_offset=get_current_utc_offset(),
 )
