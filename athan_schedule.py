@@ -8,6 +8,9 @@ def play_alert1():
   
 def play_alert2():
     playsound.playsound("alert2.wav")
+ 
+def play_alert3():
+    playsound.playsound("alert3.wav")
     
 def play_azan1():
     playsound.playsound("azan1.mp3")
@@ -25,19 +28,19 @@ def play_azan13():
     playsound.playsound("azan13.mp3")
     
 alert_actions = {
-    "fajr": play_alert1,
-    "shuruq": play_alert1,
-    "zuhr": play_alert1,
-    "asr": play_alert1,
-    "maghrib": play_alert1,
-    "isha": play_alert1,
+    "fajr": play_alert2,
+    "shuruq": play_alert2,
+    "zuhr": play_alert2,
+    "asr": play_alert2,
+    "maghrib": play_alert2,
+    "isha": play_alert2,
 }
 
 prayer_actions = {
     "fajr": play_azan4,
-    "shuruq": play_alert2,
-    "zuhr": play_alert2,
-    "asr": play_alert2,
+    "shuruq": play_alert3,
+    "zuhr": play_alert3,
+    "asr": play_alert3,
     "maghrib": play_azan10,
     "isha": play_azan13,
 }

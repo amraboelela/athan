@@ -19,6 +19,7 @@
 		F54FB6632B8BE39600CED7E0 /* stop */ = {isa = PBXFileReference; lastKnownFileType = text; path = stop; sourceTree = "<group>"; };
 		F54FB6642B8BE46F00CED7E0 /* athan_schedule */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = athan_schedule; sourceTree = "<group>"; };
 		F54FB6652B8C041A00CED7E0 /* athan_schedule.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = athan_schedule.py; sourceTree = "<group>"; };
+		F5B06C912B92CD7F00BB2AB1 /* alert3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alert3.wav; sourceTree = "<group>"; };
 		F5F1BDB22B8C065A0085B755 /* athan_times */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = athan_times; sourceTree = "<group>"; };
 		F5F1BDB32B8C0D730085B755 /* location.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = location.py; sourceTree = "<group>"; };
 		F5F1BDB42B8CDB6E0085B755 /* hijri_date.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = hijri_date.py; sourceTree = "<group>"; };
@@ -41,6 +42,7 @@
 				F54FB6612B8BDF6C00CED7E0 /* azan10.mp3 */,
 				F54FB6602B8B084900CED7E0 /* alert1.wav */,
 				F5F1BDB52B8D53800085B755 /* alert2.wav */,
+				F5B06C912B92CD7F00BB2AB1 /* alert3.wav */,
 				F54FB65F2B8B035F00CED7E0 /* azan1.mp3 */,
 				F54FB65C2B8AF30A00CED7E0 /* azan3.mp3 */,
 				F54FB65B2B8AF30A00CED7E0 /* azan13.mp3 */,
