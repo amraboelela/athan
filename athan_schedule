@@ -5,4 +5,7 @@ ROOT_DIR=$(dirname $0)
 cd ${ROOT_DIR}
 
 ./stop
-/usr/local/bin/python3 ${ROOT_DIR}/athan_schedule.py 2>&1 | tee log.txt &
+#/usr/local/bin/python3 ${ROOT_DIR}/athan_schedule.py 2>&1 | tee log.txt &
+
+/Users/amraboelela/python/myenv/bin/python3 ${ROOT_DIR}/athan_schedule.py 2>&1 | tee log.txt &
+
