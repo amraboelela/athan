@@ -93,7 +93,7 @@ for prayer, prayer_time in adhan_times.items():
 
 print("Fajr:", adhan_times["fajr"])
 
-#target_time = datetime(2024, 5, 19, 6, 39, 0)
+#target_time = datetime(2025, 4, 10, 20, 1, 0)
 #
 ## Create scheduler
 #
