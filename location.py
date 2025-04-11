@@ -26,5 +26,5 @@ def get_current_location():
     location = geocoder.ip('me')
     return location.latlng  # Returns latitude and longitude
 
-current_location = get_current_location()
-print("Location:\t", current_location)
+#current_location = get_current_location()
+#print("Location:\t", current_location)

@@ -9,7 +9,7 @@ Open source athan time with call to prayers in python, it automatically detect y
 pip install hijri-converter geocoder schedule playsound==1.2.2 apscheduler 
 ```
 
-- You need to put the correct Latitude and Longitude of your city, and the correct timezone.
+- You need to put the correct Latitude and Longitude of your city, and the correct timezone in athan_times.py.
 
 ```
 adhan_times = adhan(
