@@ -12,7 +12,7 @@ pip install hijri-converter geocoder schedule playsound==1.2.2 apscheduler
 - You need to put the correct Latitude and Longitude of your city, in location.py 
 
 ```
-current_location=(38.599192, -121.504702),  # Sacramento, CA
+current_location = (38.599192, -121.504702)
 
 ```
 
