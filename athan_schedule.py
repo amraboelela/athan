@@ -42,7 +42,7 @@ prayer_actions = {
     "zuhr": play_alert3,
     "asr": play_alert3,
     "maghrib": play_azan10,
-    "isha": play_azan13,
+    "isha": play_alert3,
 }
 
 scheduler = BlockingScheduler()

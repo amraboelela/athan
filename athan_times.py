@@ -3,7 +3,6 @@ from adhan.methods import ISNA, ASR_STANDARD
 from hijri_date import *
 from location import *
 
-#print("")
 print("Date:\t\t", today_hijri_date())
 print("")
  
@@ -13,7 +12,7 @@ params.update(ASR_STANDARD)
 
 adhan_times = adhan(
     day=date.today(),
-    location=(37.345590, -120.578162), #get_current_location(),
+    location=(37.345590, -120.578162), #get_current_location(), #(37.360569, -121.908563), (37.345590, -120.578162)
     parameters=params,
     timezone_offset=get_current_utc_offset(),
 )
