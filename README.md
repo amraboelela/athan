@@ -9,15 +9,11 @@ Open source athan time with call to prayers in python, it automatically detect y
 pip install hijri-converter geocoder schedule playsound==1.2.2 apscheduler 
 ```
 
-- You need to put the correct Latitude and Longitude of your city, and the correct timezone in athan_times.py.
+- You need to put the correct Latitude and Longitude of your city, in location.py 
 
 ```
-adhan_times = adhan(
-    day=date.today(),
-    location=(38.599192, -121.504702),  # Sacramento, CA
-    parameters=params,
-    timezone_offset=-8,
-)
+current_location=(38.599192, -121.504702),  # Sacramento, CA
+
 ```
 
 - Or set it to automatic location detection as:
