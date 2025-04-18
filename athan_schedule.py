@@ -1,7 +1,14 @@
+from datetime import datetime
+
+now = datetime.now()
+print("Current date and time:", now.strftime("%Y-%m-%d %H:%M:%S"))
+
 from athan_times import *
 import schedule
+import time
 import playsound  # Install using pip install playsound
-from apscheduler.schedulers.blocking import BlockingScheduler
+#from apscheduler.schedulers.blocking import BlockingScheduler
+from apscheduler.schedulers.background import BackgroundScheduler
 
 def play_alert1():
     playsound.playsound("alert1.wav")
@@ -45,7 +52,7 @@ prayer_actions = {
     "isha": play_alert3,
 }
 
-scheduler = BlockingScheduler()
+scheduler = BackgroundScheduler()
 
 for prayer, alert_time in alert_times.items():
     # Extract the individual components
@@ -56,19 +63,11 @@ for prayer, alert_time in alert_times.items():
     minute = alert_time.minute
     second = alert_time.second
 
-    # Print the individual components
-    print(prayer, "Time:")
-    print("Year:", year)
-    print("Month:", month)
-    print("Day:", day)
-    print("Hour:", hour)
-    print("Minute:", minute)
-    print("Second:", second)
-    print("")
-
     target_time = datetime(year, month, day, hour, minute, second)
     scheduler.add_job(alert_actions[prayer], 'date', run_date=target_time)
     
+print("")
+
 for prayer, prayer_time in adhan_times.items():
     # Extract the individual components
     year = prayer_time.year
@@ -78,25 +77,28 @@ for prayer, prayer_time in adhan_times.items():
     minute = prayer_time.minute
     second = prayer_time.second
 
-    # Print the individual components
-    print(prayer, "Time:")
-    print("Year:", year)
-    print("Month:", month)
-    print("Day:", day)
-    print("Hour:", hour)
-    print("Minute:", minute)
-    print("Second:", second)
-    print("")
-
     target_time = datetime(year, month, day, hour, minute, second)
     scheduler.add_job(prayer_actions[prayer], 'date', run_date=target_time)
+    print(f"Scheduled {prayer + " athan/alert at: ":<25} {prayer_time.strftime('%I:%M %p')}")
 
-#print("Fajr:", adhan_times["fajr"])
+print("")
 
-#target_time = datetime(2025, 4, 15, 12, 54, 0)
+target_time = datetime(2025, 4, 17, 13, 3, 0)
 # Create scheduler
-#scheduler.add_job(play_azan4, 'date', run_date=target_time)
+scheduler.add_job(play_azan4, 'date', run_date=target_time)
 
 
 # Start scheduler
 scheduler.start()
+
+# Wait for all jobs to finish
+try:
+    while scheduler.get_jobs():
+        time.sleep(1)  # Sleep briefly to avoid busy-waiting
+except (KeyboardInterrupt, SystemExit):
+    pass
+
+# Shutdown once all jobs are done
+scheduler.shutdown()
+print("All scheduled tasks completed. Scheduler shut down.")
+
