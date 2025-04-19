@@ -24,6 +24,7 @@
 		F5F1BDB32B8C0D730085B755 /* location.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = location.py; sourceTree = "<group>"; };
 		F5F1BDB42B8CDB6E0085B755 /* hijri_date.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = hijri_date.py; sourceTree = "<group>"; };
 		F5F1BDB52B8D53800085B755 /* alert2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alert2.wav; sourceTree = "<group>"; };
+		F5FEA94E2DB3EB9F0002E383 /* athan_schedule_ld.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = athan_schedule_ld.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -37,6 +38,7 @@
 				F5F1BDB42B8CDB6E0085B755 /* hijri_date.py */,
 				F5F1BDB32B8C0D730085B755 /* location.py */,
 				F54FB6652B8C041A00CED7E0 /* athan_schedule.py */,
+				F5FEA94E2DB3EB9F0002E383 /* athan_schedule_ld.py */,
 				F54FB6632B8BE39600CED7E0 /* stop */,
 				F54FB6622B8BDF6C00CED7E0 /* azan4.mp3 */,
 				F54FB6612B8BDF6C00CED7E0 /* azan10.mp3 */,

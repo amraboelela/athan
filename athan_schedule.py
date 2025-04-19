@@ -7,8 +7,7 @@ from athan_times import *
 import schedule
 import time
 import playsound  # Install using pip install playsound
-#from apscheduler.schedulers.blocking import BlockingScheduler
-from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.schedulers.blocking import BlockingScheduler
 
 def play_alert1():
     playsound.playsound("alert1.wav")
@@ -52,7 +51,7 @@ prayer_actions = {
     "isha": play_alert3,
 }
 
-scheduler = BackgroundScheduler()
+scheduler = BlockingScheduler()
 
 for prayer, alert_time in alert_times.items():
     # Extract the individual components
@@ -83,22 +82,10 @@ for prayer, prayer_time in adhan_times.items():
 
 print("")
 
-target_time = datetime(2025, 4, 17, 13, 3, 0)
+target_time = datetime(2025, 4, 18, 21, 55, 0)
 # Create scheduler
 scheduler.add_job(play_azan4, 'date', run_date=target_time)
 
-
 # Start scheduler
 scheduler.start()
-
-# Wait for all jobs to finish
-try:
-    while scheduler.get_jobs():
-        time.sleep(1)  # Sleep briefly to avoid busy-waiting
-except (KeyboardInterrupt, SystemExit):
-    pass
-
-# Shutdown once all jobs are done
-scheduler.shutdown()
-print("All scheduled tasks completed. Scheduler shut down.")
 
