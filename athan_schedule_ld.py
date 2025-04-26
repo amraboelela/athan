@@ -48,10 +48,10 @@ def generate_plist(play_time: datetime, audio_file: str, plist_name: str):
 prayer_sound = {
     "fajr": "azan4.mp3",
     "shuruq": "alert3.wav",
-    "zuhr": "alert3.wav",
-    "asr": "alert3.wav",
+    "zuhr": "azan1.wav",
+    "asr": "azan4.wav",
     "maghrib": "azan10.mp3",
-    "isha": "alert3.wav",
+    "isha": "azan3.wav",
 }
 
 for prayer, prayer_time in adhan_times.items():
@@ -67,7 +67,7 @@ for prayer, prayer_time in adhan_times.items():
     plist_path = generate_plist(target_time, prayer_sound[prayer], "org.amr.athan." + prayer)
     os.system(f"launchctl unload {plist_path}")
     os.system(f"launchctl load {plist_path}")
-    print(f"Scheduled {prayer + " athan/alert at: ":<25} {prayer_time.strftime('%I:%M %p')}")
+    print(f"Scheduled {(prayer + ' athan/alert at: '):<25} {prayer_time.strftime('%I:%M %p')}")
 
 print("")
 
