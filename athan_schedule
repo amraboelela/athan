@@ -7,4 +7,4 @@ cd ${ROOT_DIR}
 
 ./stop
 #source /Users/amraboelela/python/env/bin/activate
-/Users/amraboelela/python/env/bin/python3 -u ${ROOT_DIR}/athan_schedule_ld.py 2>&1 | tee log.txt &
+/Users/amraboelela/python/env/bin/python3 -u ${ROOT_DIR}/athan_schedule.py 2>&1 | tee log.txt &
