@@ -6,7 +6,7 @@ Open source athan time with call to prayers in python, it automatically detect y
 - In terminal run the following to install all the required python packages
 
 ```
-pip install adhan hijri-converter geocoder schedule playsound==1.2.2 apscheduler pytz
+pip install adhan hijri-converter geocoder schedule playsound==1.2.2 apscheduler pytz pyobjc
 ```
 
 - You need to put the correct Latitude and Longitude of your city, in location.py 

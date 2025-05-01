@@ -82,7 +82,7 @@ for prayer, prayer_time in adhan_times.items():
 
 print("")
 
-target_time = datetime(2025, 5, 1, 10, 29, 0)
+target_time = datetime(2025, 5, 1, 10, 43, 0)
 # Create scheduler
 scheduler.add_job(play_azan4, 'date', run_date=target_time)
 
