@@ -6,7 +6,19 @@ print("Current date and time:", now.strftime("%Y-%m-%d %H:%M:%S"))
 
 from athan_times import *
 
-def generate_plist(play_time: datetime, audio_file: str, plist_name: str):
+def generate_shell_script(audio_file: str, script_name: str):
+    script_path = os.path.expanduser(f"~/python/athan/{script_name}.sh")
+    script_content = f"""#!/bin/bash
+sleep 10
+afplay /Users/amraboelela/python/athan/{audio_file}
+"""
+
+    with open(script_path, "w") as f:
+        f.write(script_content)
+    os.chmod(script_path, 0o755)
+    return script_path
+
+def generate_plist(play_time: datetime, shell_script_path: str, plist_name: str):
     plist_path = os.path.expanduser(f"~/Library/LaunchAgents/{plist_name}.plist")
     plist_content = f"""<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" 
@@ -18,8 +30,7 @@ def generate_plist(play_time: datetime, audio_file: str, plist_name: str):
 
     <key>ProgramArguments</key>
     <array>
-        <string>afplay</string>
-        <string>/Users/amraboelela/python/athan/{audio_file}</string>
+        <string>{shell_script_path}</string>
     </array>
 
     <key>StartCalendarInterval</key>
@@ -48,29 +59,19 @@ def generate_plist(play_time: datetime, audio_file: str, plist_name: str):
 prayer_sound = {
     "fajr": "azan4.mp3",
     "shuruq": "alert3.wav",
-    "zuhr": "azan1.wav",
-    "asr": "azan4.wav",
+    "zuhr": "alert1.wav",
+    "asr": "alert4.wav",
     "maghrib": "azan10.mp3",
-    "isha": "azan3.wav",
+    "isha": "alert3.wav",
 }
 
 for prayer, prayer_time in adhan_times.items():
-    # Extract the individual components
-    year = prayer_time.year
-    month = prayer_time.month
-    day = prayer_time.day
-    hour = prayer_time.hour
-    minute = prayer_time.minute
-    second = prayer_time.second
+    script_name = f"play_{prayer}"
+    shell_script_path = generate_shell_script(prayer_sound[prayer], script_name)
 
-    target_time = datetime(year, month, day, hour, minute, second)
-    plist_path = generate_plist(target_time, prayer_sound[prayer], "org.amr.athan." + prayer)
-    os.system(f"launchctl unload {plist_path}")
+    plist_path = generate_plist(prayer_time, shell_script_path, "org.amr.athan." + prayer)
+    os.system(f"launchctl unload {plist_path} 2>/dev/null")
     os.system(f"launchctl load {plist_path}")
     print(f"Scheduled {(prayer + ' athan/alert at: '):<25} {prayer_time.strftime('%I:%M %p')}")
 
 print("")
-
-#plist_path = generate_plist(datetime(2025, 4, 19, 9, 0), "alert3.wav", "org.amr.athan.test")
-#os.system(f"launchctl unload {plist_path}")
-#os.system(f"launchctl load {plist_path}")

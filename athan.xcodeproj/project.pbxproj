@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		F50416842DC3319B00F29FAC /* play_asr.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = play_asr.sh; sourceTree = "<group>"; };
+		F50416852DC3319B00F29FAC /* play_fajr.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = play_fajr.sh; sourceTree = "<group>"; };
+		F50416862DC3319B00F29FAC /* play_isha.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = play_isha.sh; sourceTree = "<group>"; };
+		F50416872DC3319B00F29FAC /* play_maghrib.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = play_maghrib.sh; sourceTree = "<group>"; };
+		F50416882DC3319B00F29FAC /* play_shuruq.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = play_shuruq.sh; sourceTree = "<group>"; };
+		F50416892DC3319B00F29FAC /* play_zuhr.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = play_zuhr.sh; sourceTree = "<group>"; };
 		F54FB65A2B8AF30A00CED7E0 /* athan_times.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = athan_times.py; sourceTree = "<group>"; };
 		F54FB65B2B8AF30A00CED7E0 /* azan13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = azan13.mp3; sourceTree = "<group>"; };
 		F54FB65C2B8AF30A00CED7E0 /* azan3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = azan3.mp3; sourceTree = "<group>"; };
@@ -39,6 +45,12 @@
 				F5F1BDB32B8C0D730085B755 /* location.py */,
 				F54FB6652B8C041A00CED7E0 /* athan_schedule.py */,
 				F5FEA94E2DB3EB9F0002E383 /* athan_schedule_ld.py */,
+				F50416842DC3319B00F29FAC /* play_asr.sh */,
+				F50416852DC3319B00F29FAC /* play_fajr.sh */,
+				F50416862DC3319B00F29FAC /* play_isha.sh */,
+				F50416872DC3319B00F29FAC /* play_maghrib.sh */,
+				F50416882DC3319B00F29FAC /* play_shuruq.sh */,
+				F50416892DC3319B00F29FAC /* play_zuhr.sh */,
 				F54FB6632B8BE39600CED7E0 /* stop */,
 				F54FB6622B8BDF6C00CED7E0 /* azan4.mp3 */,
 				F54FB6612B8BDF6C00CED7E0 /* azan10.mp3 */,
